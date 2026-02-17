@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Al Faren & Partners | Global Landmarks & Masterplanning</title>
+    <meta name="description" content="Al Faren & Partners is an ultra-premium international real estate development and masterplanning firm with strong presence in Dubai and India." />
+    
+    <!-- SEO & Social Media -->
+    <meta property="og:title" content="Al Faren & Partners | Global Landmarks" />
+    <meta property="og:description" content="International real estate development delivering premium residential, commercial and mixed-use environments." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              gold: '#C6A75E',
+              'matte-black': '#0E0E0E',
+              'deep-navy': '#05070A',
+              'luxury-gray': '#1A1A1A',
+              'soft-ivory': '#F4F1EB',
+            },
+            fontFamily: {
+              serif: ['Playfair Display', 'serif'],
+              sans: ['Inter', 'sans-serif'],
+            },
+          }
+        }
+      }
+    </script>
+    
+    <style>
+      body {
+        background-color: #0E0E0E;
+        color: #FFFFFF;
+        overflow-x: hidden;
+      }
+      .gold-gradient {
+        background: linear-gradient(135deg, #C6A75E 0%, #E2CF9F 50%, #C6A75E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      ::selection {
+        background: #C6A75E;
+        color: #0A0A0A;
+      }
+      /* Hide scrollbar */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      /* Advanced 3D Transforms Utilities */
+      .perspective-1000 {
+        perspective: 1000px;
+      }
+      .transform-style-3d {
+        transform-style: preserve-3d;
+      }
+      .rotate-y-6 {
+        transform: rotateY(6deg);
+      }
+      .rotate-x-2 {
+        transform: rotateX(2deg);
+      }
+      .translate-z-20 {
+        transform: translateZ(20px);
+      }
+      .translate-z-50 {
+        transform: translateZ(50px);
+      }
+      .vertical-rl {
+        writing-mode: vertical-rl;
+      }
+    </style>
+
+    <script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom": "https://esm.sh/react-dom@^19.2.4",
+    "react-dom/client": "https://esm.sh/react-dom@^19.2.4/client",
+    "lucide-react": "https://esm.sh/lucide-react@^0.474.0",
+    "framer-motion": "https://esm.sh/framer-motion@^12.0.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="./index.tsx"></script>
+  </body>
+</html>
