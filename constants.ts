@@ -85,7 +85,7 @@ export const PROJECTS: Project[] = [
     name: 'Sir H. N. Reliance Foundation Hospital',
     location: 'Mumbai, India',
     category: 'Healthcare',
-    imageUrl: 'https://rmscorporation.in/wp-content/uploads/2021/10/Harkisandas-Hospital-e1649692119407.jpeg',
+    imageUrl: 'https://www.rfhospital.org/sites/default/files/2025-07/RFH_hospital-banner.jpg',
     year: '2014',
     status: 'Completed',
     description: 'A 19-storey medical marvel integrating heritage restoration with cutting-edge robotic surgery suites.'
@@ -125,7 +125,7 @@ export const PROJECTS: Project[] = [
     name: 'IIT Dhanbad',
     location: 'Dhanbad, India',
     category: 'Institutional',
-    imageUrl: 'http://alfaren.ae/images/iit%20dhanbad.webp',
+    imageUrl: 'https://alfaren.ae/images/iit%20dhanbad.webp',
     year: '2022',
     status: 'Completed',
     description: 'A sprawling educational development for one of India\'s premier engineering institutes.'
@@ -155,7 +155,7 @@ export const PROJECTS: Project[] = [
     name: 'The Sovereign Palace',
     location: 'Dubai, UAE',
     category: 'Residential',
-    imageUrl: 'http://alfaren.ae/images/FRONT.webp',
+    imageUrl: 'https://alfaren.ae/images/FRONT.webp',
     year: '2024',
     status: 'Completed',
     description: 'An iconic neoclassical masterpiece defining ultra-luxury living on an international scale.'
@@ -216,7 +216,7 @@ export const BOARD_MEMBERS: BoardMember[] = [
   {
     name: 'Shashi Prabhu',
     role: 'Senior Member & Founder',
-    image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800',
+    image: 'https://www.shashiprabhu.com/images/team/shashi-prabhu.jpg',
     bio: 'The visionary architect behind India\'s iconic sports and healthcare infrastructure for over five decades.',
     fullBio: 'Shashi Prabhu is a legendary figure in the architectural landscape of India, having founded the firm in 1974. With an career spanning over 50 years, his portfolio includes some of the nation\'s most recognized landmarks, from the Wankhede Stadium to the Lilavati Super Specialty Hospital. His leadership philosophy is rooted in structural honesty and the belief that architecture must serve as a cultural landmark for centuries.',
     expertise: ['Institutional Architecture', 'Civic Design', 'Legacy Planning'],
@@ -225,7 +225,7 @@ export const BOARD_MEMBERS: BoardMember[] = [
   {
     name: 'Atul Prabhu',
     role: 'Executive Board Member & Principal Partner',
-    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800',
+    image: 'https://www.shashiprabhu.com/images/team/atul-prabhu.jpg',
     bio: 'Guiding the firm’s global Design Strategy and conceptual leadership from the Dubai Hub.',
     fullBio: 'Atul Prabhu leads the firm\'s conceptual vision and international expansion. Based in the Dubai Studio at DIFC, he specializes in high-scale master planning and the modernization of institutional forms. His approach bridges visionary aesthetic ambition with rigorous structural logic, ensuring that Al Faren remains at the forefront of global architectural trends.',
     expertise: ['Global Master Planning', 'Conceptual Design', 'Strategic Innovation'],

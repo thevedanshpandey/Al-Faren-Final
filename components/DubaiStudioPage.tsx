@@ -55,7 +55,7 @@ const DubaiStudioPage: React.FC<{ setView: (v: any) => void }> = ({ setView }) =
               <div className="p-12 bg-luxury-gray/40 border border-gold/20 relative group">
                 <div className="absolute -top-6 -right-6 w-24 h-24 border border-gold/10 pointer-events-none" />
                 <motion.div 
-                   className="text-8xl lg:text-[120px] font-serif text-gold leading-none tracking-tighter mb-6"
+                   className="text-8xl lg:text-[120px] font-serif text-gold font-bold leading-none tracking-tighter mb-6"
                 >
                   1500+
                 </motion.div>
@@ -79,7 +79,7 @@ const DubaiStudioPage: React.FC<{ setView: (v: any) => void }> = ({ setView }) =
 
             <div className="relative aspect-square">
                <img 
-                 src="http://alfaren.ae/images/FRONT.webp" 
+                 src="https://alfaren.ae/images/FRONT.webp" 
                  alt="Signature Villa" 
                  className="w-full h-full object-cover border border-white/10 shadow-2xl grayscale group-hover:grayscale-0 transition-all duration-1000"
                />

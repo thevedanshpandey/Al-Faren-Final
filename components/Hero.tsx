@@ -17,7 +17,7 @@ const Hero: React.FC = () => {
           initial={{ scale: 1.1, opacity: 0 }}
           animate={{ scale: 1, opacity: 0.6 }}
           transition={{ duration: 3, ease: "easeOut" }}
-          src="http://alfaren.ae/images/FRONT.webp" 
+          src="https://alfaren.ae/images/FRONT.webp" 
           alt="Al Faren Signature Landmark" 
           className="w-full h-full object-cover"
           loading="eager"

@@ -47,7 +47,7 @@ const App: React.FC = () => {
   ].filter(Boolean) as any[];
 
   const hubImages = [
-    'http://alfaren.ae/images/FRONT.webp',
+    'https://alfaren.ae/images/FRONT.webp',
     'https://alfaren.ae/images/Garware-Club.jpeg'
   ];
 
