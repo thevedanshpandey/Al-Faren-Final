@@ -3,7 +3,7 @@ import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { LuxuryButton } from './ui/LuxuryButton';
 import { Shield, Building2, MapPin, HardHat, Factory, LayoutList, Workflow } from 'lucide-react';
-import { PROJECTS } from '../constants';
+import { PROJECTS, BOARD_MEMBERS } from '../constants';
 
 const IndiaAssociatesPage: React.FC<{ setView: (v: any) => void }> = ({ setView }) => {
   // Group India iconic projects by decade
@@ -47,7 +47,7 @@ const IndiaAssociatesPage: React.FC<{ setView: (v: any) => void }> = ({ setView 
             className="max-w-4xl"
           >
             <span className="text-gold uppercase tracking-[0.6em] text-[10px] font-bold block mb-8">Technical Authority</span>
-            <h1 className="text-6xl md:text-8xl lg:text-[110px] font-serif text-white leading-[0.85] tracking-tighter mb-12">
+            <h1 className="text-4xl md:text-8xl lg:text-[110px] font-serif text-white leading-[1.1] lg:leading-[0.85] tracking-tighter mb-8 lg:mb-12">
               India Hub: <br /> <span className="italic text-gold">Structural Reality.</span>
             </h1>
             <p className="text-white/60 text-xl lg:text-2xl font-light leading-relaxed max-w-2xl border-l border-gold/20 pl-8">
@@ -161,6 +161,62 @@ const IndiaAssociatesPage: React.FC<{ setView: (v: any) => void }> = ({ setView 
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Leadership & Promoters Section */}
+      <section className="bg-matte-black py-32 lg:py-56 border-t border-white/5">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl mb-24">
+            <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold block mb-8">Governance & Promoters</span>
+            <h2 className="text-5xl lg:text-7xl font-serif text-white leading-tight tracking-tighter">
+              Leadership <br /> <span className="italic text-gold">Authority.</span>
+            </h2>
+          </div>
+
+          <div className="space-y-32">
+            {/* Promoters */}
+            <div className="space-y-16">
+              <h3 className="text-2xl lg:text-3xl font-serif text-white border-b border-white/10 pb-6">India Associate Firm Promoters</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+                {BOARD_MEMBERS.filter(m => m.role.includes('Promoter')).map((member, idx) => (
+                  <div key={member.name} className="flex flex-col sm:flex-row gap-8 items-center sm:items-start group">
+                    <div className="w-40 h-40 flex-shrink-0 overflow-hidden border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="space-y-4 text-center sm:text-left">
+                      <div>
+                        <h4 className="text-2xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h4>
+                        <span className="text-gold uppercase tracking-widest text-[10px] font-bold">{member.role}</span>
+                      </div>
+                      <p className="text-white/40 text-sm font-light leading-relaxed">{member.bio}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Senior Advisory Board */}
+            <div className="space-y-16">
+              <h3 className="text-2xl lg:text-3xl font-serif text-white border-b border-white/10 pb-6">Senior Advisory Board</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+                {BOARD_MEMBERS.filter(m => m.role.includes('Senior Advisory Board')).map((member, idx) => (
+                  <div key={member.name} className="flex flex-col sm:flex-row gap-8 items-center sm:items-start group">
+                    <div className="w-40 h-40 flex-shrink-0 overflow-hidden border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="space-y-4 text-center sm:text-left">
+                      <div>
+                        <h4 className="text-2xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h4>
+                        <span className="text-gold uppercase tracking-widest text-[10px] font-bold">{member.role}</span>
+                      </div>
+                      <p className="text-white/40 text-sm font-light leading-relaxed">{member.bio}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </section>

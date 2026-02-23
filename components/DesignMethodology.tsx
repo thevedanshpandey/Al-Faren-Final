@@ -39,18 +39,18 @@ const DesignMethodology: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="flex flex-col lg:flex-row justify-between items-end mb-24 lg:mb-32 gap-12">
-          <div className="space-y-8">
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 lg:mb-32 gap-8 lg:gap-12">
+          <div className="space-y-6 lg:space-y-8">
             <div className="flex items-center space-x-6">
               <div className="w-12 h-px bg-gold" />
               <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold">Protocol</span>
             </div>
-            <h2 className="text-6xl md:text-8xl lg:text-[100px] font-serif text-white leading-[0.85] tracking-tighter">
+            <h2 className="text-5xl md:text-7xl lg:text-[100px] font-serif text-white leading-[0.9] lg:leading-[0.85] tracking-tighter">
               Strategic <br /> <span className="italic text-gold">Excellence.</span>
             </h2>
           </div>
           <div className="max-w-md lg:pb-4">
-            <p className="text-white/40 font-light text-xl leading-relaxed border-l border-gold/30 pl-8">
+            <p className="text-white/40 font-light text-lg lg:text-xl leading-relaxed border-l border-gold/30 pl-6 lg:pl-8">
               A disciplined, four-phase methodology ensuring absolute precision from visionary concept to built reality.
             </p>
           </div>

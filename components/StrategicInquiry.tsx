@@ -27,7 +27,7 @@ const StrategicInquiry: React.FC = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-6xl md:text-8xl lg:text-[120px] font-serif text-white tracking-tighter leading-[0.9]"
+            className="text-4xl md:text-7xl lg:text-[120px] font-serif text-white tracking-tighter leading-[1.0] lg:leading-[0.9]"
           >
             Where Vision <br />
             <span className="italic gold-gradient">Meets Legacy.</span>

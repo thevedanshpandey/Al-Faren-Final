@@ -91,11 +91,11 @@ const MapPin = ({ top, left, label, isPrimary = false, delay = 0 }: { top: strin
 
 const GlobalFootprint: React.FC = () => {
   return (
-    <section id="global" className="bg-matte-black py-20 lg:py-40 relative overflow-hidden border-b border-white/5">
+    <section id="global" className="bg-matte-black py-16 lg:py-40 relative overflow-hidden border-b border-white/5">
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         
         {/* Statistics Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 relative mb-32 lg:mb-56">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 lg:gap-0 relative mb-24 lg:mb-56">
           <div className="hidden lg:block absolute inset-0 pointer-events-none">
              <div className="flex justify-between h-full px-px">
                 {[1, 2, 3].map(i => (
@@ -119,14 +119,14 @@ const GlobalFootprint: React.FC = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 1 }}
-            className="p-10 lg:p-24 flex flex-col justify-center space-y-12"
+            className="p-8 lg:p-24 flex flex-col justify-center space-y-10 lg:space-y-12"
           >
             <div className="space-y-6">
-              <h2 className="text-5xl lg:text-7xl font-serif text-white leading-[1.1] tracking-tight">
+              <h2 className="text-4xl lg:text-7xl font-serif text-white leading-[1.1] tracking-tight">
                 An Integrated <br />
                 <span className="text-gold italic">Global Network.</span>
               </h2>
-              <p className="text-white/50 text-xl font-light leading-relaxed max-w-xl">
+              <p className="text-white/50 text-lg lg:text-xl font-light leading-relaxed max-w-xl">
                 Our presence transcends borders. With a visionary international studio in Dubai and a robust network of excellence across India, Al Faren & Partners manages a legacy portfolio of ultra-luxury assets.
               </p>
             </div>
@@ -168,7 +168,7 @@ const GlobalFootprint: React.FC = () => {
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 1.5 }}
-            className="relative min-h-[500px] lg:min-h-full bg-[#050505] overflow-hidden"
+            className="relative min-h-[400px] md:min-h-[500px] lg:min-h-full bg-[#050505] overflow-hidden"
           >
             <div className="absolute inset-0 z-0 opacity-40 bg-[url('https://www.transparenttextures.com/patterns/dark-matter.png')]" />
             

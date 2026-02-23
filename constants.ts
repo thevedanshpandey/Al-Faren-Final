@@ -215,7 +215,7 @@ export const SERVICES: Service[] = [
 export const BOARD_MEMBERS: BoardMember[] = [
   {
     name: 'Shashi Prabhu',
-    role: 'Senior Member & Founder',
+    role: 'Sr. Founder (Chairman Emeritus)',
     image: 'https://www.shashiprabhu.com/images/team/shashi-prabhu.jpg',
     bio: 'The visionary architect behind India\'s iconic sports and healthcare infrastructure for over five decades.',
     fullBio: 'Shashi Prabhu is a legendary figure in the architectural landscape of India, having founded the firm in 1974. With an career spanning over 50 years, his portfolio includes some of the nation\'s most recognized landmarks, from the Wankhede Stadium to the Lilavati Super Specialty Hospital. His leadership philosophy is rooted in structural honesty and the belief that architecture must serve as a cultural landmark for centuries.',
@@ -224,30 +224,57 @@ export const BOARD_MEMBERS: BoardMember[] = [
   },
   {
     name: 'Atul Prabhu',
-    role: 'Executive Board Member & Principal Partner',
-    image: 'https://www.shashiprabhu.com/images/team/atul-prabhu.jpg',
+    role: 'Sr. Associate (Design Principal)',
+    image: 'https://alfaren.ae/images/Atul_prabhu.webp',
     bio: 'Guiding the firm’s global Design Strategy and conceptual leadership from the Dubai Hub.',
     fullBio: 'Atul Prabhu leads the firm\'s conceptual vision and international expansion. Based in the Dubai Studio at DIFC, he specializes in high-scale master planning and the modernization of institutional forms. His approach bridges visionary aesthetic ambition with rigorous structural logic, ensuring that Al Faren remains at the forefront of global architectural trends.',
     expertise: ['Global Master Planning', 'Conceptual Design', 'Strategic Innovation'],
     experienceYears: 28
   },
   {
-    name: 'Anil Prabhu',
-    role: 'Executive Board Member & Technical Director',
+    name: 'Sharad Vengurlekar',
+    role: 'Senior Member — Design Studio, Dubai',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800',
+    bio: 'A distinguished member of the Design Studio in Dubai, contributing to international design excellence.',
+    fullBio: 'Sharad Vengurlekar brings extensive experience to the Dubai Design Studio, focusing on high-end residential and commercial concepts. His work is characterized by a deep understanding of luxury standards and the integration of contemporary forms with functional elegance, ensuring every project meets the highest international benchmarks.',
+    expertise: ['Luxury Design', 'Commercial Concepts', 'International Standards'],
+    experienceYears: 32
+  },
+  {
+    name: 'Anil Kamble',
+    role: 'Operations & Project Liaison — Senior Advisory Board',
     image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800',
-    bio: 'Overseeing the technical governance and execution muscle of the Mumbai and Delhi offices.',
-    fullBio: 'Anil Prabhu is the anchor of the firm’s technical operations. He manages the transition of visionary concepts into structural reality, overseeing complex engineering coordination and implementation across India. His focus is on technical excellence, regulatory governance, and the precision required for sovereign-scale infrastructure projects.',
-    expertise: ['Project Implementation', 'Engineering Governance', 'BIM Strategy'],
+    bio: 'Strategic advisor focusing on operations and institutional project liaison.',
+    fullBio: 'Anil Kamble serves on the Senior Advisory Board, bridging the gap between grand architectural vision and operational reality. With a focus on project liaison and institutional coordination, he ensures that complex developments are navigated through regulatory frameworks with precision and efficiency.',
+    expertise: ['Operations', 'Project Liaison', 'Regulatory Navigation'],
+    experienceYears: 30
+  },
+  {
+    name: 'Vikas Suryawanshi',
+    role: 'Strategic Planning & Finance — Senior Advisory Board',
+    image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=800',
+    bio: 'Advising on the financial architecture and strategic growth of global initiatives.',
+    fullBio: 'Vikas Suryawanshi provides critical oversight on strategic planning and financial governance. His expertise ensures the long-term viability and fiscal health of the firm\'s massive institutional and masterplanning projects, aligning economic strategy with visionary design goals.',
+    expertise: ['Strategic Planning', 'Finance', 'Institutional Governance'],
+    experienceYears: 28
+  },
+  {
+    name: 'Anitha.S',
+    role: 'Promoter — India Associate Firm',
+    image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=800',
+    bio: 'Driving the strategic growth and foundational stability of the India Associate Firm.',
+    fullBio: 'Anitha.S is a key promoter of the India Associate Firm, playing a pivotal role in its regional expansion and institutional positioning. Her leadership focuses on fostering strategic partnerships and ensuring the firm\'s technical governance meets the highest standards of excellence.',
+    expertise: ['Strategic Growth', 'Partnership Development', 'Institutional Positioning'],
     experienceYears: 25
   },
   {
-    name: 'Commissioner',
-    role: 'Executive Board Member — Governance & Public Liaison',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800',
-    bio: 'Advising on large-scale civic developments and municipal coordination for institutional landmarks.',
-    fullBio: 'Holding a critical role in governance and institutional relations, our Commissioner brings decades of high-level administrative experience to the board. Specializing in public-private partnerships (PPP) and municipal coordination, they ensure that the firm\'s largest civic projects align with urban development goals and national infrastructure mandates.',
-    expertise: ['Public Policy', 'Urban Governance', 'Strategic Liaison'],
-    experienceYears: 35
+    name: 'Pradnya. K',
+    role: 'Promoter — India Associate Firm',
+    image: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?q=80&w=800',
+    bio: 'Ensuring foundational excellence and strategic alignment for regional operations.',
+    fullBio: 'Pradnya. K serves as a promoter for the India Associate Firm, dedicated to maintaining the foundational integrity and strategic alignment of the firm\'s operations in the subcontinent. Her role involves high-level oversight of regional projects and the cultivation of a culture of architectural excellence.',
+    expertise: ['Foundational Integrity', 'Regional Oversight', 'Architectural Excellence'],
+    experienceYears: 22
   }
 ];
 

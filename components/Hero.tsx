@@ -40,17 +40,17 @@ const Hero: React.FC = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1.2, delay: 0.3 }}
-            className="text-5xl md:text-7xl lg:text-[90px] font-serif leading-[1.0] text-white tracking-tighter mb-12"
+            className="text-4xl md:text-7xl lg:text-[90px] font-serif leading-[1.1] lg:leading-[1.0] text-white tracking-tighter mb-8 lg:mb-12"
           >
             Where Vision <br /> <span className="italic text-gold">Meets the Legacy.</span>
           </motion.h1>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-end">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-end">
             <motion.p 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ duration: 1.5, delay: 0.8 }}
-              className="text-xl md:text-2xl text-white/70 font-light leading-relaxed max-w-xl border-l border-gold/40 pl-10 py-2"
+              className="text-lg md:text-2xl text-white/70 font-light leading-relaxed max-w-xl border-l border-gold/40 pl-6 lg:pl-10 py-2"
             >
               For five decades, Al Faren has been architecting the skyline with institutional landmarks and defining the pinnacle of international luxury.
             </motion.p>

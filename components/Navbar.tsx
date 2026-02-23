@@ -97,7 +97,7 @@ const Navbar: React.FC<NavbarProps> = ({ currentView, setView }) => {
             initial={{ opacity: 0, x: '100%' }}
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: '100%' }}
-            className="fixed inset-0 bg-matte-black h-screen w-full flex flex-col items-center justify-center space-y-12 text-2xl font-serif uppercase tracking-[0.2em] z-[90]"
+            className="fixed inset-0 bg-matte-black h-screen w-full flex flex-col items-center justify-center space-y-8 lg:space-y-12 text-xl lg:text-2xl font-serif uppercase tracking-[0.2em] z-[90] overflow-y-auto py-20"
           >
             <button className="absolute top-10 right-10 text-white" onClick={() => setMobileMenuOpen(false)}>
               <X size={32} />

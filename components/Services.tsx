@@ -17,18 +17,18 @@ const Services: React.FC = () => {
       </div>
 
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-32 mb-24 lg:mb-40 items-end">
-          <div className="space-y-8">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-32 mb-16 lg:mb-40 items-end">
+          <div className="space-y-6 lg:space-y-8">
             <div className="flex items-center space-x-4">
               <div className="w-12 h-px bg-gold" />
               <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold">Capabilities</span>
             </div>
-            <h2 className="text-6xl md:text-8xl lg:text-[120px] font-serif text-white leading-[0.85] tracking-tighter">
+            <h2 className="text-5xl md:text-7xl lg:text-[120px] font-serif text-white leading-[0.9] lg:leading-[0.85] tracking-tighter">
               Core <br /> <span className="italic text-gold">Expertise.</span>
             </h2>
           </div>
           <div className="max-w-md lg:pb-6">
-            <p className="text-white/40 text-xl font-light leading-relaxed border-l border-gold/30 pl-8">
+            <p className="text-white/40 text-lg lg:text-xl font-light leading-relaxed border-l border-gold/30 pl-6 lg:pl-8">
               Decades of precision in masterplanning, civic development, and ultra-luxury residential ecosystems, delivered with a mandate of structural honesty.
             </p>
           </div>

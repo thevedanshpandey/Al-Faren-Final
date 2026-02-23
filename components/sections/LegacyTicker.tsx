@@ -59,10 +59,10 @@ const LegacyTicker: React.FC<{ setView?: (v: any) => void }> = ({ setView }) => 
                 <div className="w-12 h-px bg-gold" />
                 <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold">The Heritage Archive</span>
             </div>
-            <h2 className="text-6xl md:text-8xl lg:text-[110px] font-serif text-white leading-[0.85] tracking-tighter">
+            <h2 className="text-4xl md:text-8xl lg:text-[110px] font-serif text-white leading-[1.1] lg:leading-[0.85] tracking-tighter">
                 Featured <br /> <span className="italic gold-gradient">Developments.</span>
             </h2>
-            <p className="text-white/40 text-xl font-light leading-relaxed max-w-2xl border-l border-gold/20 pl-8">
+            <p className="text-white/40 text-lg lg:text-xl font-light leading-relaxed max-w-2xl border-l border-gold/20 pl-6 lg:pl-8">
                 A definitive collection of structural monuments defining cityscapes for five decades. Explore our scrolling archive of over 1,500 visionary projects.
             </p>
         </div>

@@ -10,16 +10,16 @@ const AboutStudio: React.FC = () => {
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 1.2 }}
-            className="space-y-12"
+            className="space-y-8 lg:space-y-12"
           >
             <div className="space-y-6">
               <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold">Studio Narrative</span>
-              <h2 className="text-5xl md:text-7xl lg:text-8xl font-serif text-white leading-[1.0] tracking-tighter">
+              <h2 className="text-4xl md:text-6xl lg:text-8xl font-serif text-white leading-[1.1] lg:leading-[1.0] tracking-tighter">
                 Authority in <br /> <span className="gold-gradient italic">Complex Geometry.</span>
               </h2>
             </div>
             
-            <div className="space-y-8 text-white/60 text-xl font-light leading-relaxed max-w-xl">
+            <div className="space-y-6 lg:space-y-8 text-white/60 text-lg lg:text-xl font-light leading-relaxed max-w-xl">
               <p>
                 Al Faren & Partners is a globally established architecture and masterplanning firm specialized in high-scale institutional developments and ultra-luxury residential ecosystems.
               </p>

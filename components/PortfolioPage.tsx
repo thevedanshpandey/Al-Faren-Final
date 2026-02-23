@@ -47,7 +47,7 @@ const PortfolioPage: React.FC = () => {
           className="max-w-4xl"
         >
           <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold block mb-6">Global Archive</span>
-          <h1 className="text-6xl md:text-8xl lg:text-[110px] font-serif text-white leading-none tracking-tighter mb-8">Authoritative <br /> <span className="italic text-gold">Portfolio.</span></h1>
+          <h1 className="text-4xl md:text-8xl lg:text-[110px] font-serif text-white leading-[1.1] lg:leading-none tracking-tighter mb-8">Authoritative <br /> <span className="italic text-gold">Portfolio.</span></h1>
         </motion.div>
       </section>
 

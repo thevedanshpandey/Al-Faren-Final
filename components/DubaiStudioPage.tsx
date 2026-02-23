@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { LuxuryButton } from './ui/LuxuryButton';
 import { Globe, MapPin, Award, PenTool } from 'lucide-react';
 
+import { BOARD_MEMBERS } from '../constants';
+
 const DubaiStudioPage: React.FC<{ setView: (v: any) => void }> = ({ setView }) => {
   return (
     <div className="bg-matte-black min-h-screen pt-32">
@@ -26,13 +28,49 @@ const DubaiStudioPage: React.FC<{ setView: (v: any) => void }> = ({ setView }) =
             className="max-w-4xl"
           >
             <span className="text-gold uppercase tracking-[0.6em] text-[10px] font-bold block mb-8">Conceptual HQ</span>
-            <h1 className="text-6xl md:text-8xl lg:text-[110px] font-serif text-white leading-[0.85] tracking-tighter mb-12">
+            <h1 className="text-4xl md:text-8xl lg:text-[110px] font-serif text-white leading-[1.1] lg:leading-[0.85] tracking-tighter mb-8 lg:mb-12">
               Dubai Studio: <br /> <span className="italic text-gold">Global Hub.</span>
             </h1>
-            <p className="text-white/60 text-xl lg:text-2xl font-light leading-relaxed max-w-2xl border-l border-gold/20 pl-8">
+            <p className="text-white/60 text-lg lg:text-2xl font-light leading-relaxed max-w-2xl border-l border-gold/20 pl-6 lg:pl-8">
               Strategically headquartered in DIFC, our Dubai studio directs architectural vision, master planning, and international design leadership for the world's most ambitious developments.
             </p>
           </motion.div>
+        </div>
+      </section>
+
+      {/* Leadership Section */}
+      <section className="bg-matte-black py-32 lg:py-48 border-b border-white/5">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl mb-24">
+            <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold block mb-8">Design Leadership</span>
+            <h2 className="text-5xl lg:text-7xl font-serif text-white leading-tight tracking-tighter">
+              Conceptual <br /> <span className="italic text-gold">Authority.</span>
+            </h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+            {BOARD_MEMBERS.filter(m => m.role.includes('Dubai') || m.role.includes('Design Principal') || m.role.includes('Chairman Emeritus')).map((member, idx) => (
+              <motion.div 
+                key={member.name}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                className="group cursor-default space-y-6"
+              >
+                <div className="aspect-[4/5] overflow-hidden border border-white/5 grayscale group-hover:grayscale-0 transition-all duration-1000">
+                  <img src={member.image} alt={member.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" />
+                </div>
+                <div className="space-y-4">
+                  <div>
+                    <h4 className="text-2xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h4>
+                    <span className="text-gold uppercase tracking-widest text-[10px] font-bold">{member.role}</span>
+                  </div>
+                  <p className="text-white/40 text-sm font-light leading-relaxed">{member.bio}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
 

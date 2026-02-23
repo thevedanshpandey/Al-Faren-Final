@@ -70,20 +70,20 @@ const App: React.FC = () => {
             <Hero />
             <GlobalFootprint />
 
-            <section className="bg-deep-navy py-32 lg:py-56 px-6 lg:px-12 relative border-b border-white/5">
-               <div className="max-w-6xl mx-auto text-center space-y-12">
-                 <History className="text-gold mx-auto opacity-40 mb-8" size={48} strokeWidth={0.5} />
-                 <h2 className="text-5xl lg:text-8xl font-serif text-white tracking-tighter leading-none">
+            <section className="bg-deep-navy py-24 lg:py-56 px-6 lg:px-12 relative border-b border-white/5">
+               <div className="max-w-6xl mx-auto text-center space-y-8 lg:space-y-12">
+                 <History className="text-gold mx-auto opacity-40 mb-4 lg:mb-8" size={48} strokeWidth={0.5} />
+                 <h2 className="text-4xl md:text-6xl lg:text-8xl font-serif text-white tracking-tighter leading-none">
                     50 Years of <br /> <span className="italic gold-gradient">Architectural Legacy.</span>
                  </h2>
-                 <p className="text-white/50 text-xl lg:text-2xl font-light leading-relaxed max-w-4xl mx-auto">
+                 <p className="text-white/50 text-lg lg:text-2xl font-light leading-relaxed max-w-4xl mx-auto">
                    {NARRATIVE.heritage.description}
                  </p>
-                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 pt-12 items-start">
+                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8 pt-8 lg:pt-12 items-start">
                    {NARRATIVE.heritage.stats.map((stat, i) => (
                      <div key={i} className="space-y-2">
-                        <span className="text-gold font-serif text-2xl whitespace-nowrap">{stat.year}</span>
-                        <p className="text-[10px] uppercase tracking-widest text-white/40 font-bold leading-tight px-4">{stat.event}</p>
+                        <span className="text-gold font-serif text-xl lg:text-2xl whitespace-nowrap">{stat.year}</span>
+                        <p className="text-[9px] lg:text-[10px] uppercase tracking-widest text-white/40 font-bold leading-tight px-2 lg:px-4">{stat.event}</p>
                      </div>
                    ))}
                  </div>
@@ -177,13 +177,13 @@ const App: React.FC = () => {
             </section>
 
             {/* Leadership Spotlight Section */}
-            <section className="bg-matte-black py-32 lg:py-56 px-6 lg:px-12 border-b border-white/5 overflow-hidden">
+            <section className="bg-matte-black py-24 lg:py-56 px-6 lg:px-12 border-b border-white/5 overflow-hidden">
                <div className="max-w-[1800px] mx-auto">
-                 <div className="flex flex-col lg:flex-row items-center gap-24 lg:gap-32">
+                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-32">
                     <motion.div 
                       initial={{ opacity: 0, x: -50 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      className="lg:w-1/2 relative"
+                      className="w-full lg:w-1/2 relative"
                     >
                       <div className="aspect-[4/5] overflow-hidden border border-white/5 shadow-2xl relative bg-luxury-gray">
                         <img 
@@ -192,47 +192,47 @@ const App: React.FC = () => {
                           className="w-full h-full object-cover grayscale transition-all duration-[2s]" 
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-matte-black via-transparent to-transparent opacity-60" />
-                        <div className="absolute bottom-12 left-12">
-                           <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold block mb-4">Senior Member & Founder</span>
-                           <h3 className="text-4xl lg:text-6xl font-serif text-white tracking-tighter">Shashi Prabhu</h3>
+                        <div className="absolute bottom-8 lg:bottom-12 left-8 lg:left-12">
+                           <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold block mb-4">{shashiPrabhu?.role}</span>
+                           <h3 className="text-3xl lg:text-6xl font-serif text-white tracking-tighter">Shashi Prabhu</h3>
                         </div>
                       </div>
                     </motion.div>
-
+ 
                     <motion.div 
                       initial={{ opacity: 0, x: 50 }}
                       whileInView={{ opacity: 1, x: 0 }}
-                      className="lg:w-1/2 space-y-12"
+                      className="w-full lg:w-1/2 space-y-8 lg:space-y-12"
                     >
                       <div className="space-y-6">
                         <div className="flex items-center space-x-6">
                           <Users className="text-gold" size={24} strokeWidth={1} />
                           <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold">Leadership</span>
                         </div>
-                        <h2 className="text-5xl lg:text-8xl font-serif text-white leading-none tracking-tighter">
+                        <h2 className="text-4xl md:text-6xl lg:text-8xl font-serif text-white leading-none tracking-tighter">
                           The Vision <br /> <span className="italic text-gold">of Authority.</span>
                         </h2>
                       </div>
-
+ 
                       <div className="space-y-8">
                          <div className="relative">
-                            <Quote className="absolute -top-8 -left-8 text-gold/10" size={64} />
-                            <blockquote className="border-l border-gold/40 pl-10 py-4 relative z-10">
-                              <p className="text-2xl lg:text-4xl font-serif text-white/90 italic leading-relaxed">
+                            <Quote className="absolute -top-6 lg:-top-8 -left-6 lg:-left-8 text-gold/10" size={48} lg:size={64} />
+                            <blockquote className="border-l border-gold/40 pl-6 lg:pl-10 py-2 lg:py-4 relative z-10">
+                              <p className="text-xl lg:text-4xl font-serif text-white/90 italic leading-relaxed">
                                 "Architecture is a silent witness to history. Our duty is to ensure it speaks with honesty, integrity, and timelessness."
                               </p>
                             </blockquote>
                          </div>
-                         <p className="text-white/40 text-lg font-light leading-relaxed max-w-xl">
+                         <p className="text-white/40 text-base lg:text-lg font-light leading-relaxed max-w-xl">
                             Shashi Prabhu has spent over five decades architecting the most significant institutional and sports landmarks across India, establishing Al Faren as a global benchmark.
                          </p>
                       </div>
-
-                      <div className="pt-8">
+ 
+                      <div className="pt-4 lg:pt-8">
                          <LuxuryButton 
                            variant="outline" 
                            onClick={() => setView('executive-board')}
-                           className="px-12 py-6"
+                           className="w-full sm:w-auto px-12 py-6"
                          >
                            View Executive Board Members <ArrowRight className="ml-4" size={16} />
                          </LuxuryButton>
@@ -242,17 +242,17 @@ const App: React.FC = () => {
                </div>
             </section>
 
-            <section id="portfolio" className="bg-deep-navy py-32 lg:py-56 px-6 lg:px-12 border-b border-white/5">
+            <section id="portfolio" className="bg-deep-navy py-24 lg:py-56 px-6 lg:px-12 border-b border-white/5">
               <div className="max-w-[1800px] mx-auto">
-                <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-24 gap-12">
+                <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-16 lg:mb-24 gap-8 lg:gap-12">
                   <div className="space-y-6">
                     <div className="flex items-center space-x-4">
                       <LayoutGrid className="text-gold" size={24} strokeWidth={1} />
                       <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold">Heritage Portfolio</span>
                     </div>
-                    <h2 className="text-5xl lg:text-[100px] font-serif text-white leading-none tracking-tighter">Featured <br /> <span className="italic text-gold">Developments.</span></h2>
+                    <h2 className="text-4xl md:text-6xl lg:text-[100px] font-serif text-white leading-none tracking-tighter">Featured <br /> <span className="italic text-gold">Developments.</span></h2>
                   </div>
-                  <p className="text-white/40 max-w-md font-light text-xl leading-relaxed border-l border-gold/20 pl-8">
+                  <p className="text-white/40 max-w-md font-light text-lg lg:text-xl leading-relaxed border-l border-gold/20 pl-6 lg:pl-8">
                     Our definitive collection of institutional monuments and architectural landmarks defining cityscapes for five decades.
                   </p>
                 </div>

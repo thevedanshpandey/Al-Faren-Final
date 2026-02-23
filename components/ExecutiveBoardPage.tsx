@@ -6,6 +6,43 @@ import { BoardMember } from '../types';
 import { X, Award, ShieldCheck, Briefcase, History, ArrowRight } from 'lucide-react';
 import { LuxuryButton } from './ui/LuxuryButton';
 
+const MemberCard: React.FC<{ member: BoardMember; idx: number; onClick: () => void }> = ({ member, idx, onClick }) => (
+  <motion.div 
+    initial={{ opacity: 0, y: 30 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ delay: idx * 0.1 }}
+    onClick={onClick}
+    className="group cursor-pointer space-y-6"
+  >
+    <div className="aspect-[4/5] overflow-hidden border border-white/5 relative bg-luxury-gray">
+      <img 
+        src={member.image} 
+        alt={member.name} 
+        className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
+      />
+      <div className="absolute inset-0 bg-matte-black/40 group-hover:bg-transparent transition-colors duration-700" />
+      <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
+        <div className="bg-gold p-3 rounded-full text-black">
+          <ArrowRight size={20} />
+        </div>
+      </div>
+    </div>
+    <div className="space-y-3">
+      <div>
+        <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-bold block mb-1">{member.role}</span>
+        <h3 className="text-2xl lg:text-3xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h3>
+      </div>
+      <p className="text-white/40 text-xs leading-relaxed font-light line-clamp-3">
+        {member.bio}
+      </p>
+      <div className="pt-4 border-t border-white/5">
+         <span className="text-[10px] text-white/20 uppercase tracking-widest font-bold group-hover:text-gold transition-colors">View Profile</span>
+      </div>
+    </div>
+  </motion.div>
+);
+
 const ExecutiveBoardPage: React.FC = () => {
   const [selectedMember, setSelectedMember] = useState<BoardMember | null>(null);
 
@@ -23,7 +60,7 @@ const ExecutiveBoardPage: React.FC = () => {
             className="max-w-4xl"
           >
             <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold block mb-8">Governance & Leadership</span>
-            <h1 className="text-6xl md:text-8xl lg:text-[110px] font-serif text-white leading-none tracking-tighter mb-12">
+            <h1 className="text-4xl md:text-8xl lg:text-[110px] font-serif text-white leading-[1.1] lg:leading-none tracking-tighter mb-8 lg:mb-12">
               Executive <br /> <span className="italic text-gold">Board.</span>
             </h1>
             <p className="text-white/50 text-xl lg:text-3xl font-light leading-relaxed max-w-2xl border-l border-gold/20 pl-8">
@@ -61,46 +98,47 @@ const ExecutiveBoardPage: React.FC = () => {
 
       {/* 3. Leadership Profiles Section */}
       <section className="py-32 lg:py-56 px-6 lg:px-12">
-        <div className="container mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-            {BOARD_MEMBERS.map((member, idx) => (
-              <motion.div 
-                key={member.name}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1 }}
-                onClick={() => setSelectedMember(member)}
-                className="group cursor-pointer flex flex-col sm:flex-row gap-8 lg:gap-12 items-center sm:items-start"
-              >
-                <div className="w-full sm:w-1/2 aspect-[4/5] overflow-hidden border border-white/5 relative bg-luxury-gray">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
-                    className="w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-1000" 
-                  />
-                  <div className="absolute inset-0 bg-matte-black/40 group-hover:bg-transparent transition-colors duration-700" />
-                  <div className="absolute bottom-6 right-6 opacity-0 group-hover:opacity-100 transition-opacity">
-                    <div className="bg-gold p-3 rounded-full text-black">
-                      <ArrowRight size={20} />
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full sm:w-1/2 space-y-6 flex flex-col justify-center py-6">
-                  <div>
-                    <span className="text-gold uppercase tracking-[0.3em] text-[10px] font-bold block mb-2">{member.role}</span>
-                    <h3 className="text-3xl lg:text-4xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h3>
-                  </div>
-                  <p className="text-white/40 text-sm leading-relaxed font-light">
-                    {member.bio}
-                  </p>
-                  <div className="pt-6 border-t border-white/5">
-                     <span className="text-[10px] text-white/20 uppercase tracking-widest font-bold">View Board Profile</span>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+        <div className="container mx-auto space-y-32">
+          
+          {/* Design Studio, Dubai */}
+          <div className="space-y-16">
+            <div className="border-l-2 border-gold pl-8">
+              <h2 className="text-4xl lg:text-5xl font-serif text-white tracking-tight">Design Studio, <span className="italic text-gold">Dubai.</span></h2>
+              <p className="text-white/40 text-sm font-light mt-4 max-w-xl">The conceptual forge where international trends and luxury standards are synthesized into unique architectural visions.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+              {BOARD_MEMBERS.filter(m => m.role.includes('Dubai') || m.role.includes('Design Principal') || m.role.includes('Chairman Emeritus')).map((member, idx) => (
+                <MemberCard key={member.name} member={member} idx={idx} onClick={() => setSelectedMember(member)} />
+              ))}
+            </div>
           </div>
+
+          {/* Senior Advisory Board */}
+          <div className="space-y-16">
+            <div className="border-l-2 border-gold pl-8">
+              <h2 className="text-4xl lg:text-5xl font-serif text-white tracking-tight">Senior <span className="italic text-gold">Advisory Board.</span></h2>
+              <p className="text-white/40 text-sm font-light mt-4 max-w-xl">Distinguished advisors providing strategic oversight, operational excellence, and financial governance to global initiatives.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+              {BOARD_MEMBERS.filter(m => m.role.includes('Senior Advisory Board')).map((member, idx) => (
+                <MemberCard key={member.name} member={member} idx={idx} onClick={() => setSelectedMember(member)} />
+              ))}
+            </div>
+          </div>
+
+          {/* India Associate Firm Promoters */}
+          <div className="space-y-16">
+            <div className="border-l-2 border-gold pl-8">
+              <h2 className="text-4xl lg:text-5xl font-serif text-white tracking-tight">India Associate Firm <span className="italic text-gold">Promoters.</span></h2>
+              <p className="text-white/40 text-sm font-light mt-4 max-w-xl">Leading the strategic growth and foundational stability of our regional operations across the Indian subcontinent.</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
+              {BOARD_MEMBERS.filter(m => m.role.includes('Promoter')).map((member, idx) => (
+                <MemberCard key={member.name} member={member} idx={idx} onClick={() => setSelectedMember(member)} />
+              ))}
+            </div>
+          </div>
+
         </div>
       </section>
 
