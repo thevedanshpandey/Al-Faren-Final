@@ -1,13 +1,24 @@
 import React from 'react';
 import { Download } from 'lucide-react';
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  setView: (view: any) => void;
+}
+
+const Footer: React.FC<FooterProps> = ({ setView }) => {
+  const handleNav = (view: any, e: React.MouseEvent) => {
+    e.preventDefault();
+    setView(view);
+    window.location.hash = view;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-matte-black py-16 md:py-20 border-t border-white/5">
       <div className="container mx-auto px-6 lg:px-12">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16 mb-16 md:mb-20">
           <div className="sm:col-span-2 lg:col-span-1 space-y-6">
-            <div className="flex flex-col">
+            <div className="flex flex-col cursor-pointer" onClick={(e) => handleNav('home', e)}>
               <span className="text-2xl font-serif tracking-widest text-gold font-bold">AL FAREN</span>
               <span className="text-[10px] tracking-[0.3em] uppercase text-white/60 -mt-1">& PARTNERS</span>
             </div>
@@ -22,28 +33,28 @@ const Footer: React.FC = () => {
           <div className="space-y-4 lg:space-y-6">
             <h5 className="text-white font-bold uppercase tracking-widest text-[10px]">Dubai Associate</h5>
             <div className="text-white/40 text-xs lg:text-sm space-y-2 font-light">
-              <p>Level 32, Emirates Financial Towers</p>
+              <p>Emirates Financial Towers</p>
               <p>DIFC, Dubai, UAE</p>
-              <p className="pt-2 text-white/60 font-medium tracking-wider">T: +971 4 000 000</p>
+              <p className="pt-2 text-white/60 font-medium tracking-wider">T: +971 4 396 7901</p>
             </div>
           </div>
 
           <div className="space-y-4 lg:space-y-6">
             <h5 className="text-white font-bold uppercase tracking-widest text-[10px]">India Associate</h5>
             <div className="text-white/40 text-xs lg:text-sm space-y-2 font-light">
-              <p>Level 4, Statesman House</p>
-              <p>Connaught Place, New Delhi</p>
-              <p className="pt-2 text-white/60 font-medium tracking-wider">T: +91 11 0000 0000</p>
+              <p>Ground Floor, Wankhede Stadium</p>
+              <p>Churchgate, Mumbai, India</p>
+              <p className="pt-2 text-white/60 font-medium tracking-wider">T: +91 9619106637</p>
             </div>
           </div>
 
           <div className="space-y-4 lg:space-y-6">
             <h5 className="text-white font-bold uppercase tracking-widest text-[10px]">Institutional</h5>
             <div className="flex flex-col space-y-2 lg:space-y-3 text-white/40 text-xs lg:text-sm font-light">
-               <a href="#" className="hover:text-gold transition-colors">Strategic Portfolio</a>
-               <a href="#" className="hover:text-gold transition-colors">Governance</a>
-               <a href="#" className="hover:text-gold transition-colors">Privacy Policy</a>
-               <a href="#" className="hover:text-gold transition-colors">Terms of Engagement</a>
+               <a href="#portfolio" onClick={(e) => handleNav('portfolio', e)} className="hover:text-gold transition-colors">Strategic Portfolio</a>
+               <a href="#governance" onClick={(e) => handleNav('executive-board', e)} className="hover:text-gold transition-colors">Governance</a>
+               <a href="#privacy" onClick={(e) => handleNav('privacy', e)} className="hover:text-gold transition-colors">Privacy Policy</a>
+               <a href="#terms" onClick={(e) => handleNav('terms', e)} className="hover:text-gold transition-colors">Terms of Engagement</a>
             </div>
           </div>
         </div>

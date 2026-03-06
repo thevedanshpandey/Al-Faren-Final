@@ -28,7 +28,7 @@ const Leadership: React.FC = () => {
               <p className="text-xl md:text-2xl lg:text-4xl font-serif text-white/90 italic leading-relaxed">
                 "We architect ecosystems that define the future trajectory of international urban living."
               </p>
-              <footer className="mt-6 md:mt-8 text-gold uppercase tracking-widest text-[9px] md:text-xs font-bold">— Atul Prabhu, Principal Partner</footer>
+              <footer className="mt-6 md:mt-8 text-gold uppercase tracking-widest text-[9px] md:text-xs font-bold">— A. Prabhu, Principal Partner</footer>
             </motion.blockquote>
 
             <p className="text-white/50 text-lg md:text-xl font-light leading-relaxed max-w-lg">

@@ -2,7 +2,7 @@
 import React, { useMemo } from 'react';
 import { motion } from 'framer-motion';
 import { LuxuryButton } from './ui/LuxuryButton';
-import { Shield, Building2, MapPin, HardHat, Factory, LayoutList, Workflow } from 'lucide-react';
+import { Shield, Building2, MapPin, HardHat, Factory, LayoutList, Workflow, Globe } from 'lucide-react';
 import { PROJECTS, BOARD_MEMBERS } from '../constants';
 
 const IndiaAssociatesPage: React.FC<{ setView: (v: any) => void }> = ({ setView }) => {
@@ -51,14 +51,70 @@ const IndiaAssociatesPage: React.FC<{ setView: (v: any) => void }> = ({ setView 
               India Hub: <br /> <span className="italic text-gold">Structural Reality.</span>
             </h1>
             <p className="text-white/60 text-xl lg:text-2xl font-light leading-relaxed max-w-2xl border-l border-gold/20 pl-8">
-              The technical heart of Al Faren & Partners. Our Mumbai and Delhi offices translate grand visions into structural reality with engineering precision and rigorous technical governance.
+              The technical heart of Al Faren & Partners. Our Mumbai headquarters translates grand visions into structural reality with engineering precision and rigorous technical governance.
             </p>
           </motion.div>
         </div>
       </section>
 
+      {/* Leadership & Promoters Section (Leadership Authority) */}
+      <section className="bg-matte-black py-32 lg:py-48 border-b border-white/5">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="max-w-4xl mb-24">
+            <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold block mb-8">Governance & Promoters</span>
+            <h2 className="text-5xl lg:text-7xl font-serif text-white leading-tight tracking-tighter">
+              Leadership <br /> <span className="italic text-gold">Authority.</span>
+            </h2>
+          </div>
+
+          <div className="space-y-32">
+            {/* Promoters */}
+            <div className="space-y-16">
+              <h3 className="text-2xl lg:text-3xl font-serif text-white border-b border-white/10 pb-6">India Associate Firm Promoters</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+                {BOARD_MEMBERS.filter(m => m.role.includes('Promoter')).map((member, idx) => (
+                  <div key={member.name} className="flex flex-col sm:flex-row gap-8 items-center sm:items-start group">
+                    <div className="w-40 h-40 flex-shrink-0 overflow-hidden border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="space-y-4 text-center sm:text-left">
+                      <div>
+                        <h4 className="text-2xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h4>
+                        <span className="text-gold uppercase tracking-widest text-[10px] font-bold">{member.role}</span>
+                      </div>
+                      <p className="text-white/40 text-sm font-light leading-relaxed">{member.bio}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Senior Advisory Board */}
+            <div className="space-y-16">
+              <h3 className="text-2xl lg:text-3xl font-serif text-white border-b border-white/10 pb-6">Senior Advisory Board</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
+                {BOARD_MEMBERS.filter(m => m.role.includes('Senior Advisory Board')).map((member, idx) => (
+                  <div key={member.name} className="flex flex-col sm:flex-row gap-8 items-center sm:items-start group">
+                    <div className="w-40 h-40 flex-shrink-0 overflow-hidden border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-700">
+                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    </div>
+                    <div className="space-y-4 text-center sm:text-left">
+                      <div>
+                        <h4 className="text-2xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h4>
+                        <span className="text-gold uppercase tracking-widest text-[10px] font-bold">{member.role}</span>
+                      </div>
+                      <p className="text-white/40 text-sm font-light leading-relaxed">{member.bio}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Execution Excellence Section */}
-      <section className="bg-deep-navy py-32 lg:py-56 border-y border-white/5">
+      <section className="bg-deep-navy py-32 lg:py-56 border-b border-white/5">
         <div className="container mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
              <div className="space-y-12">
@@ -85,7 +141,7 @@ const IndiaAssociatesPage: React.FC<{ setView: (v: any) => void }> = ({ setView 
              <div className="bg-luxury-gray p-12 lg:p-20 border border-white/10 relative">
                 <div className="absolute top-0 right-0 w-24 h-24 border-t border-r border-gold/20" />
                 <p className="text-white/60 text-2xl font-serif italic leading-relaxed mb-12 relative z-10">
-                  "Our network across Mumbai, Delhi, and Hyderabad provides the implementation framework for developments that define modern Indian architecture."
+                  "Our network across Mumbai and major regional hubs provides the implementation framework for developments that define modern Indian architecture."
                 </p>
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-[1px] bg-gold" />
@@ -165,62 +221,6 @@ const IndiaAssociatesPage: React.FC<{ setView: (v: any) => void }> = ({ setView 
         </div>
       </section>
 
-      {/* Leadership & Promoters Section */}
-      <section className="bg-matte-black py-32 lg:py-56 border-t border-white/5">
-        <div className="container mx-auto px-6 lg:px-12">
-          <div className="max-w-4xl mb-24">
-            <span className="text-gold uppercase tracking-[0.5em] text-[10px] font-bold block mb-8">Governance & Promoters</span>
-            <h2 className="text-5xl lg:text-7xl font-serif text-white leading-tight tracking-tighter">
-              Leadership <br /> <span className="italic text-gold">Authority.</span>
-            </h2>
-          </div>
-
-          <div className="space-y-32">
-            {/* Promoters */}
-            <div className="space-y-16">
-              <h3 className="text-2xl lg:text-3xl font-serif text-white border-b border-white/10 pb-6">India Associate Firm Promoters</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-                {BOARD_MEMBERS.filter(m => m.role.includes('Promoter')).map((member, idx) => (
-                  <div key={member.name} className="flex flex-col sm:flex-row gap-8 items-center sm:items-start group">
-                    <div className="w-40 h-40 flex-shrink-0 overflow-hidden border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-700">
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="space-y-4 text-center sm:text-left">
-                      <div>
-                        <h4 className="text-2xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h4>
-                        <span className="text-gold uppercase tracking-widest text-[10px] font-bold">{member.role}</span>
-                      </div>
-                      <p className="text-white/40 text-sm font-light leading-relaxed">{member.bio}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Senior Advisory Board */}
-            <div className="space-y-16">
-              <h3 className="text-2xl lg:text-3xl font-serif text-white border-b border-white/10 pb-6">Senior Advisory Board</h3>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-24">
-                {BOARD_MEMBERS.filter(m => m.role.includes('Senior Advisory Board')).map((member, idx) => (
-                  <div key={member.name} className="flex flex-col sm:flex-row gap-8 items-center sm:items-start group">
-                    <div className="w-40 h-40 flex-shrink-0 overflow-hidden border border-white/10 grayscale group-hover:grayscale-0 transition-all duration-700">
-                      <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
-                    </div>
-                    <div className="space-y-4 text-center sm:text-left">
-                      <div>
-                        <h4 className="text-2xl font-serif text-white group-hover:text-gold transition-colors">{member.name}</h4>
-                        <span className="text-gold uppercase tracking-widest text-[10px] font-bold">{member.role}</span>
-                      </div>
-                      <p className="text-white/40 text-sm font-light leading-relaxed">{member.bio}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Technical Capability Section */}
       <section className="bg-deep-navy py-32 lg:py-48 border-y border-white/5">
         <div className="container mx-auto px-6 lg:px-12">
@@ -273,6 +273,43 @@ const IndiaAssociatesPage: React.FC<{ setView: (v: any) => void }> = ({ setView 
                 </div>
               ))}
            </div>
+        </div>
+      </section>
+
+      {/* Location Section */}
+      <section className="bg-luxury-gray py-24 border-t border-white/5">
+        <div className="container mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+             <div className="space-y-12">
+                <div className="flex items-center space-x-6">
+                   <MapPin className="text-gold" size={32} />
+                   <div>
+                      <h4 className="text-white font-bold tracking-widest text-xs uppercase mb-2">India Headquarters</h4>
+                      <p className="text-white/60 text-lg leading-relaxed font-light">
+                        Ground Floor, Wankhede Stadium, Block A2 and B1, <br />
+                        D Road, Churchgate, Mumbai, Maharashtra 400020
+                      </p>
+                   </div>
+                </div>
+                <div className="flex items-center space-x-6">
+                   <Globe className="text-gold" size={32} />
+                   <div>
+                      <h4 className="text-white font-bold tracking-widest text-xs uppercase mb-2">Connect</h4>
+                      <p className="text-white/60 text-lg font-light">india@alfaren.com</p>
+                      <p className="text-white/60 text-lg font-light">T: +91 9619106637</p>
+                   </div>
+                </div>
+             </div>
+             
+             {/* Map Placeholder for Mumbai */}
+             <div className="aspect-video bg-matte-black relative flex items-center justify-center border border-white/5 grayscale">
+                <div className="absolute inset-0 opacity-20 bg-[url('https://upload.wikimedia.org/wikipedia/commons/e/ec/World_map_blank_without_borders.svg')] bg-center bg-contain bg-no-repeat invert" />
+                <div className="relative z-10 flex flex-col items-center">
+                   <div className="w-4 h-4 bg-gold rounded-full animate-pulse shadow-[0_0_20px_#C6A75E]" />
+                   <span className="text-[10px] uppercase tracking-widest text-gold mt-4 font-bold">Churchgate Hub</span>
+                </div>
+             </div>
+          </div>
         </div>
       </section>
     </div>

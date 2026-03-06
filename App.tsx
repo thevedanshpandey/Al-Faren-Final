@@ -15,6 +15,8 @@ import PortfolioPage from './components/PortfolioPage';
 import DubaiStudioPage from './components/DubaiStudioPage';
 import IndiaAssociatesPage from './components/IndiaAssociatesPage';
 import ExecutiveBoardPage from './components/ExecutiveBoardPage';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import TermsOfEngagement from './components/TermsOfEngagement';
 import { PROJECTS, OFFICES, NARRATIVE, BOARD_MEMBERS } from './constants';
 import { ProjectCard } from './components/sections/ProjectCard';
 import { LuxuryButton } from './components/ui/LuxuryButton';
@@ -22,19 +24,34 @@ import { MediaSection } from './components/sections/MediaSection';
 import { History, Globe, Shield, ArrowRight, LayoutGrid, Users, Quote } from 'lucide-react';
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'portfolio' | 'dubai-studio' | 'india-associates' | 'executive-board'>('home');
+  const [view, setView] = useState<'home' | 'portfolio' | 'dubai-studio' | 'india-associates' | 'executive-board' | 'privacy' | 'terms'>('home');
 
   useEffect(() => {
-    const handleHash = () => {
+    const handleNavigation = () => {
+      // Check query params first (e.g., for filtered portfolio)
+      const params = new URLSearchParams(window.location.search);
+      const category = params.get('category');
+      
+      // Check hash
       const hash = window.location.hash.replace('#', '');
-      if (['portfolio', 'dubai-studio', 'india-associates', 'home', 'executive-board'].includes(hash)) {
+      
+      if (category && (!hash || hash === 'portfolio')) {
+        setView('portfolio');
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else if (['portfolio', 'dubai-studio', 'india-associates', 'home', 'executive-board', 'privacy', 'terms'].includes(hash)) {
         setView(hash as any);
         window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     };
-    window.addEventListener('hashchange', handleHash);
-    handleHash();
-    return () => window.removeEventListener('hashchange', handleHash);
+
+    window.addEventListener('hashchange', handleNavigation);
+    window.addEventListener('popstate', handleNavigation);
+    handleNavigation();
+    
+    return () => {
+      window.removeEventListener('hashchange', handleNavigation);
+      window.removeEventListener('popstate', handleNavigation);
+    };
   }, []);
 
   const featuredProjects = [
@@ -63,6 +80,10 @@ const App: React.FC = () => {
         return <IndiaAssociatesPage setView={setView} />;
       case 'executive-board':
         return <ExecutiveBoardPage />;
+      case 'privacy':
+        return <PrivacyPolicy />;
+      case 'terms':
+        return <TermsOfEngagement />;
       case 'home':
       default:
         return (
@@ -303,9 +324,9 @@ const App: React.FC = () => {
           transition={{ duration: 0.5 }}
         >
           {renderContent()}
-          <Footer />
         </motion.main>
       </AnimatePresence>
+      <Footer setView={setView} />
       <Chatbot />
     </div>
   );

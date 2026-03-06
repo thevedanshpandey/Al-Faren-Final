@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './Navbar';
 import Hero from './Hero';
@@ -13,6 +13,11 @@ import Collaboration from './Collaboration';
 import Contact from './Contact';
 import Footer from './Footer';
 import PortfolioPage from './PortfolioPage';
+import DubaiStudioPage from './DubaiStudioPage';
+import IndiaAssociatesPage from './IndiaAssociatesPage';
+import ExecutiveBoardPage from './ExecutiveBoardPage';
+import PrivacyPolicy from './PrivacyPolicy';
+import TermsOfEngagement from './TermsOfEngagement';
 import { PROJECTS, OFFICES, NARRATIVE } from '../constants';
 import { ProjectCard } from './sections/ProjectCard';
 import { LuxuryButton } from './ui/LuxuryButton';
@@ -59,7 +64,7 @@ const PresentationSection: React.FC<{
 );
 
 const App: React.FC = () => {
-  const [view, setView] = useState<'home' | 'portfolio'>('home');
+  const [view, setView] = useState<'home' | 'portfolio' | 'dubai-studio' | 'india-associates' | 'executive-board' | 'privacy' | 'terms'>('home');
 
   // Featured projects specifically for the home page (most iconic ones)
   const featuredProjects = [
@@ -69,19 +74,37 @@ const App: React.FC = () => {
     PROJECTS.find(p => p.id === 'iconic-bollywood')
   ].filter(Boolean) as any[];
 
-  return (
-    <div className="bg-matte-black selection:bg-gold selection:text-black overflow-x-hidden">
-      <Navbar currentView={view} setView={setView} />
-      
-      <AnimatePresence mode="wait">
-        {view === 'home' ? (
-          <motion.main
-            key="home"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash.replace('#', '');
+      const validViews = ['home', 'portfolio', 'dubai-studio', 'india-associates', 'executive-board', 'privacy', 'terms'];
+      if (validViews.includes(hash)) {
+        setView(hash as any);
+      }
+    };
+
+    handleHashChange();
+    window.addEventListener('hashchange', handleHashChange);
+    return () => window.removeEventListener('hashchange', handleHashChange);
+  }, []);
+
+  const renderView = () => {
+    switch (view) {
+      case 'portfolio':
+        return <PortfolioPage />;
+      case 'dubai-studio':
+        return <DubaiStudioPage setView={setView} />;
+      case 'india-associates':
+        return <IndiaAssociatesPage setView={setView} />;
+      case 'executive-board':
+        return <ExecutiveBoardPage />;
+      case 'privacy':
+        return <PrivacyPolicy />;
+      case 'terms':
+        return <TermsOfEngagement />;
+      default:
+        return (
+          <>
             {/* 1. Immersive Hero */}
             <Hero />
             
@@ -202,7 +225,11 @@ const App: React.FC = () => {
                       <p className="text-gold text-xs font-bold tracking-widest uppercase italic border-b border-gold/20 pb-2 w-fit">{office.address}</p>
                     </div>
 
-                    <LuxuryButton variant="ghost" className="self-start !px-0 rounded-none hover:text-gold transition-all duration-500">
+                    <LuxuryButton 
+                      variant="ghost" 
+                      className="self-start !px-0 rounded-none hover:text-gold transition-all duration-500"
+                      onClick={() => setView(office.region.includes('Dubai') ? 'dubai-studio' : 'india-associates')}
+                    >
                       Connect with Region <ExternalLink className="ml-4" size={14} />
                     </LuxuryButton>
                   </div>
@@ -212,27 +239,33 @@ const App: React.FC = () => {
 
             {/* 9. Supporting Presentation Modules */}
             <Services />
-            <LegacyTicker />
+            <LegacyTicker setView={setView} />
             <VisionaryConcepts />
             <Leadership />
             <MediaSection />
             <Collaboration />
             <Contact />
-            <Footer />
-          </motion.main>
-        ) : (
-          <motion.div
-            key="portfolio"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <PortfolioPage />
-            <Footer />
-          </motion.div>
-        )}
+          </>
+        );
+    }
+  };
+
+  return (
+    <div className="bg-matte-black selection:bg-gold selection:text-black overflow-x-hidden">
+      <Navbar currentView={view} setView={setView} />
+      
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={view}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          {renderView()}
+        </motion.div>
       </AnimatePresence>
+      <Footer setView={setView} />
     </div>
   );
 };

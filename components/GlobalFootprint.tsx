@@ -145,7 +145,7 @@ const GlobalFootprint: React.FC = () => {
                 <div className="w-2.5 h-2.5 rounded-full bg-gold/60 mt-1" />
                 <div className="flex flex-col">
                   <span className="text-xs lg:text-sm uppercase tracking-[0.3em] text-white font-bold group-hover:text-gold transition-colors">
-                    HEAD OFFICE - MUMBAI (BKC)
+                    HEAD OFFICE - MUMBAI (CHURCHGATE)
                   </span>
                   <span className="text-[10px] text-white/30 uppercase tracking-[0.2em] mt-1">Technical Governance & Engineering</span>
                 </div>

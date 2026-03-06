@@ -14,8 +14,8 @@ export const NARRATIVE = {
     ]
   },
   synergy: {
-    dubai: "The Conceptual Heart: Our Dubai studio at DIFC serves as the global forge for architectural vision, where international trends and luxury standards are synthesized into unique concepts.",
-    india: "The Implementation Muscle: Our Mumbai and Delhi offices translate grand visions into structural reality, providing the technical governance required for massive institutional and infrastructure scales."
+    dubai: "The Conceptual Heart: Our Dubai studio serves as the global forge for architectural vision, where international trends and luxury standards are synthesized into unique concepts.",
+    india: "The Implementation Muscle: Our Mumbai office translates grand visions into structural reality, providing the technical governance required for massive institutional and infrastructure scales."
   }
 };
 
@@ -28,7 +28,7 @@ export const PROJECTS: Project[] = [
     imageUrl: 'https://cdn.shopify.com/s/files/1/0278/4565/6649/files/WhatsApp_Image_2023-10-07_at_05.38.29.webp?v=1696640028',
     year: '1974',
     status: 'Completed',
-    description: 'The world-renowned cricket cathedral. Originally designed in 1974 and completely reimagined for the 2011 ICC World Cup Finals.'
+    description: 'The world-renowned cricket cathedral, originally commissioned in 1974. A monumental pillar of global sports heritage, completely reimagined for the 2011 ICC World Cup Finals as a sanctuary of structural honesty and modern spectator comfort.'
   },
   {
     id: 'iconic-yamuna',
@@ -38,27 +38,27 @@ export const PROJECTS: Project[] = [
     imageUrl: 'https://alfaren.ae/images/Indiragandhistadium.jpg',
     year: '1982',
     status: 'Completed',
-    description: 'Commissioned for the 1982 Asian Games, this iconic structure remains a pillar of Indian sports infrastructure.'
+    description: 'A 1982 Asian Games legacy project. This iconic velodrome remains a definitive pillar of Indian sports infrastructure, engineered for high-performance cycling and institutional longevity, serving as the premier venue for the sport in the subcontinent.'
   },
   {
     id: 'iconic-lilavati',
     name: 'Lilavati Super Specialty Hospital',
     location: 'Mumbai, India',
     category: 'Healthcare',
-    imageUrl: 'https://alfarren.com/wp-content/uploads/2022/06/hospitality-projects-full.jpg',
-    year: '1998',
+    imageUrl: 'https://www.healthcareradius.in/cloud/2024/04/27/Lilavati-Hospital-Mumbai-new-board-of-trustees.jpg',
+    year: '1997',
     status: 'Completed',
-    description: 'A premier multi-specialty healthcare institution that redefined hospital hospitality in India.'
+    description: 'Established in 1997, this premier multi-specialty institution redefined hospital hospitality in India. It stands as a legacy of precision-engineered healthcare and patient-centric structural authority, serving as a benchmark for medical infrastructure.'
   },
   {
     id: 'iconic-bcci',
     name: 'BCCI Headquarters',
     location: 'Mumbai, India',
-    category: 'Institutional',
+    category: 'Leisure & Residential',
     imageUrl: 'https://alfaren.ae/images/Garware-Club.jpeg',
     year: '2006',
     status: 'Completed',
-    description: 'The administrative heart of Indian cricket, combining executive office architecture with high-performance sports management facilities.'
+    description: 'The administrative heart of Indian cricket, established in 2006. This landmark combines executive governance with high-performance facilities, serving as a legacy hub for the sport\'s global leadership.'
   },
   {
     id: 'iconic-hyderabad',
@@ -66,9 +66,9 @@ export const PROJECTS: Project[] = [
     location: 'Hyderabad, India',
     category: 'Sports',
     imageUrl: 'https://archup.net/wp-content/uploads/2023/11/Rajiv-Gandhi-International-Cricket-Stadium.webp',
-    year: '2008',
+    year: '2004',
     status: 'Completed',
-    description: 'A major international venue with a capacity for 55,000 spectators, engineered for optimal sightlines.'
+    description: 'A 2004 landmark with a 55,000-spectator capacity. Engineered for optimal sightlines and structural dominance, it serves as a definitive venue for international cricket heritage and high-performance sport.'
   },
   {
     id: 'iconic-nsci',
@@ -76,9 +76,9 @@ export const PROJECTS: Project[] = [
     location: 'Mumbai, India',
     category: 'Sports',
     imageUrl: 'https://alfaren.ae/images/DSC04986.JPG',
-    year: '2014',
+    year: '2013',
     status: 'Completed',
-    description: 'One of the largest indoor multipurpose arenas in India, serving as a hub for international sports and entertainment events.'
+    description: 'Delivered in 2013, this is one of India\'s largest indoor multipurpose arenas. A legacy hub for international entertainment and sports, showcasing structural versatility and grand scale in the heart of Mumbai.'
   },
   {
     id: 'iconic-reliance',
@@ -88,7 +88,7 @@ export const PROJECTS: Project[] = [
     imageUrl: 'https://www.rfhospital.org/sites/default/files/2025-07/RFH_hospital-banner.jpg',
     year: '2014',
     status: 'Completed',
-    description: 'A 19-storey medical marvel integrating heritage restoration with cutting-edge robotic surgery suites.'
+    description: 'A 19-storey medical marvel completed in 2014. It integrates heritage restoration with cutting-edge robotic surgery suites, defining the future of high-precision healthcare architecture.'
   },
   {
     id: 'iconic-mca',
@@ -96,39 +96,39 @@ export const PROJECTS: Project[] = [
     location: 'Mumbai, India',
     category: 'Sports',
     imageUrl: 'https://www.shashiprabhu.com/images/projects/interior-design/Symboysis/s7.jpg',
-    year: '2016',
+    year: '2007',
     status: 'Completed',
-    description: 'State-of-the-art training and administrative facility in the heart of the Bandra Kurla Complex.'
+    description: 'A 2007 state-of-the-art training and administrative facility. Located in the heart of BKC, it serves as a technical forge for the next generation of cricket excellence, integrating indoor practice with institutional governance.'
   },
   {
     id: 'iconic-bmc',
     name: 'BMC Headquarters Annex',
     location: 'Mumbai, India',
-    category: 'Institutional',
+    category: 'Leisure & Residential',
     imageUrl: 'https://alfaren.ae/images/Ext Bldg-Color-02.jpg',
-    year: '2019',
+    year: '2018',
     status: 'Completed',
-    description: 'An annex to the historic Mumbai municipal headquarters, blending neoclassical aesthetics with modern utility.'
+    description: 'A neoclassical extension to the historic Mumbai municipal headquarters, delivered in 2018. It stands as a masterclass in blending heritage aesthetics with modern administrative utility and structural authority.'
   },
   {
     id: 'iconic-msrtc',
     name: 'MSRTC Pune',
     location: 'Pune, India',
-    category: 'Infrastructure',
+    category: 'Leisure & Residential',
     imageUrl: 'https://alfaren.ae/images/Panvel-Bus-Port1.jpg',
     year: '2022',
     status: 'Completed',
-    description: 'Reimagining public bus transit as high-end airport-style infrastructure in Shivajinagar.'
+    description: 'A 2022 infrastructure milestone that reimagined public transit as a high-end airport-style experience, setting a new global benchmark for civic utility and passenger comfort.'
   },
   {
     id: 'iconic-iit',
     name: 'IIT Dhanbad',
     location: 'Dhanbad, India',
-    category: 'Institutional',
+    category: 'Education',
     imageUrl: 'https://alfaren.ae/images/iit%20dhanbad.webp',
     year: '2022',
     status: 'Completed',
-    description: 'A sprawling educational development for one of India\'s premier engineering institutes.'
+    description: 'A sprawling 2022 educational development for India\'s premier engineering institute. Designed to foster innovation and academic authority through structural clarity and grand scale.'
   },
   {
     id: 'iconic-tata',
@@ -138,38 +138,38 @@ export const PROJECTS: Project[] = [
     imageUrl: 'https://alfarren.com/wp-content/uploads/2022/06/auditorium-full.jpg',
     year: '2022',
     status: 'Completed',
-    description: 'High-performance sports center dedicated to gymnastic excellence.'
+    description: 'A 2022 high-performance center dedicated to gymnastic excellence. This facility serves as a technical benchmark for specialized sports architecture in India.'
   },
   {
     id: 'iconic-sies',
     name: 'SIES Research Center',
     location: 'Navi Mumbai, India',
-    category: 'Institutional',
+    category: 'Education',
     imageUrl: 'https://www.symbiosis.ac.in/images/home/SUHRC_PHOTO.jpg',
     year: '2023',
     status: 'Completed',
-    description: 'Specialized scientific research environment built for future technological exploration.'
+    description: 'A 2023 scientific research environment built for future technological exploration. It represents the firm\'s mandate for educational landmarks that drive institutional progress.'
   },
   {
     id: 'v-front',
     name: 'The Sovereign Palace',
     location: 'Dubai, UAE',
-    category: 'Residential',
+    category: 'High-rise Residential',
     imageUrl: 'https://alfaren.ae/images/FRONT.webp',
     year: '2024',
     status: 'Completed',
-    description: 'An iconic neoclassical masterpiece defining ultra-luxury living on an international scale.'
+    description: 'A 2024 architectural masterpiece defining ultra-luxury living. This neoclassical palace serves as a definitive statement of sovereign elegance and structural authority in Dubai.'
   },
   // Villa Collection
-  { id: 'v1', name: 'Villa Ahmad Estate', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/Ahmad-2.JPG', year: '2022', status: 'Completed', description: 'Bespoke luxury villa featuring grand proportions and traditional Middle Eastern architectural cues.' },
-  { id: 'v2', name: 'AR-16 Private Residence', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/AR16.JPG', year: '2021', status: 'Completed', description: 'A contemporary take on traditional forms, optimizing light and spatial privacy.' },
-  { id: 'v3', name: 'AR-48 Luxury Manor', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/AR48.JPG', year: '2022', status: 'Completed', description: 'Expansive residential estate focusing on indoor-outdoor living and premium finishes.' },
-  { id: 'v4', name: 'The Glass Pavilion Villa', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/DSC02705.JPG', year: '2023', status: 'Completed', description: 'Modern minimalist residence emphasizing transparency and structural lightness.' },
-  { id: 'v5', name: 'Neo-Classical Estate', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/DSC03221.JPG', year: '2021', status: 'Completed', description: 'Timeless architectural language applied to a modern functional plan.' },
-  { id: 'v7', name: 'The Khoory Mansion', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/Khoory-1.JPG', year: '2020', status: 'Completed', description: 'Grand-scale residential architecture defining the luxury skyline of private Dubai.' },
-  { id: 'v9', name: 'Palm Jumeirah Villa', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/IMG_4230.JPG', year: '2021', status: 'Completed', description: 'Exclusive waterfront living featuring bespoke stone craftsmanship.' },
-  { id: 'v11', name: 'Ivory Heights Estate', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/IMG_4291.JPG', year: '2022', status: 'Completed', description: 'Pure white volumes and clean lines define this luxury residence.' },
-  { id: 'v12', name: 'The Atrium Villa', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/IMG_4296.JPG', year: '2022', status: 'Completed', description: 'Centered around a grand internal court, bringing light into every space.' }
+  { id: 'v1', name: 'Villa Ahmad Estate', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/Ahmad-2.JPG', year: '2022', status: 'Completed', description: 'A 2022 bespoke residential masterpiece. This estate features grand proportions and traditional Middle Eastern architectural cues, serving as a definitive legacy of luxury in the heart of Dubai.' },
+  { id: 'v2', name: 'AR-16 Private Residence', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/AR16.JPG', year: '2021', status: 'Completed', description: 'Delivered in 2021, this residence is a contemporary synthesis of traditional forms. It optimizes light and spatial privacy, standing as a landmark of modern residential authority.' },
+  { id: 'v3', name: 'AR-48 Luxury Manor', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/AR48.JPG', year: '2022', status: 'Completed', description: 'A 2022 expansive residential estate. Focusing on the seamless integration of indoor-outdoor living, it represents the firm\'s mandate for premium finishes and structural elegance.' },
+  { id: 'v4', name: 'The Glass Pavilion Villa', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/DSC02705.JPG', year: '2023', status: 'Completed', description: 'A 2023 modern minimalist residence. Emphasizing transparency and structural lightness, it stands as a visionary concept in contemporary luxury living.' },
+  { id: 'v5', name: 'Neo-Classical Estate', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/DSC03221.JPG', year: '2021', status: 'Completed', description: 'A 2021 timeless architectural statement. This estate applies a neoclassical language to a modern functional plan, ensuring institutional longevity for private residents.' },
+  { id: 'v7', name: 'The Khoory Mansion', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/Khoory-1.JPG', year: '2020', status: 'Completed', description: 'Commissioned in 2020, this grand-scale mansion defines the luxury skyline of private Dubai. A definitive legacy of bespoke craftsmanship and architectural dominance.' },
+  { id: 'v9', name: 'Palm Jumeirah Villa', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/IMG_4230.JPG', year: '2021', status: 'Completed', description: 'A 2021 exclusive waterfront residence. Featuring bespoke stone craftsmanship, it stands as a sanctuary of luxury on the world-renowned Palm Jumeirah.' },
+  { id: 'v11', name: 'Ivory Heights Estate', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/IMG_4291.JPG', year: '2022', status: 'Completed', description: 'Delivered in 2022, this estate is defined by pure white volumes and clean lines. A modern landmark of residential authority and aesthetic clarity.' },
+  { id: 'v12', name: 'The Atrium Villa', location: 'Dubai, UAE', category: 'Villa', imageUrl: 'https://alfaren.ae/images/IMG_4296.JPG', year: '2022', status: 'Completed', description: 'A 2022 architectural marvel centered around a grand internal court. This design brings natural light into every space, creating a legacy of spatial harmony.' }
 ];
 
 export const OFFICES: Office[] = [
@@ -177,14 +177,14 @@ export const OFFICES: Office[] = [
     region: 'Dubai Studio: Global Hub',
     address: 'Innovation Suite, Emirates Financial Towers, DIFC, Dubai, UAE',
     email: 'studio@alfaren.com',
-    phone: '+971 4 000 000',
+    phone: '+971 4 396 7901',
     image: 'https://alfaren.ae/images/IMG_4331.JPG'
   },
   {
     region: 'Mumbai: Head Office',
-    address: 'Executive Heights, Bandra Kurla Complex (BKC), Mumbai, India',
+    address: 'Ground Floor, Wankhede Stadium, Block A2 and B1, D Road, Churchgate, Mumbai, Maharashtra 400020',
     email: 'india@alfaren.com',
-    phone: '+91 22 0000 0000',
+    phone: '+91 9619106637',
     image: 'https://alfaren.ae/images/Garware-Club.jpeg'
   }
 ];
@@ -214,7 +214,7 @@ export const SERVICES: Service[] = [
 
 export const BOARD_MEMBERS: BoardMember[] = [
   {
-    name: 'Shashi Prabhu',
+    name: 'S.Prabhu',
     role: 'Sr. Founder (Chairman Emeritus)',
     image: 'https://www.shashiprabhu.com/images/team/shashi-prabhu.jpg',
     bio: 'The visionary architect behind India\'s iconic sports and healthcare infrastructure for over five decades.',
@@ -223,7 +223,7 @@ export const BOARD_MEMBERS: BoardMember[] = [
     experienceYears: 50
   },
   {
-    name: 'Atul Prabhu',
+    name: 'A. Prabhu',
     role: 'Sr. Associate (Design Principal)',
     image: 'https://alfaren.ae/images/Atul_prabhu.webp',
     bio: 'Guiding the firm’s global Design Strategy and conceptual leadership from the Dubai Hub.',
@@ -232,7 +232,7 @@ export const BOARD_MEMBERS: BoardMember[] = [
     experienceYears: 28
   },
   {
-    name: 'Sharad Vengurlekar',
+    name: 'Sharad.V',
     role: 'Senior Member — Design Studio, Dubai',
     image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800',
     bio: 'A distinguished member of the Design Studio in Dubai, contributing to international design excellence.',
@@ -305,21 +305,21 @@ export const MEDIA: MediaMention[] = [
   {
     id: 'm4',
     title: 'International Sports Infrastructure Development',
-    source: 'SPA Sports Profile',
+    source: 'Sports Infrastructure Profile',
     date: '2024',
     link: '#'
   },
   {
     id: 'm5',
     title: 'Global Client Trust and Government Projects',
-    source: 'SPA Sports Profile',
+    source: 'Sports Infrastructure Profile',
     date: '2024',
     link: '#'
   },
   {
     id: 'm6',
     title: 'International Design and Technical Collaborations',
-    source: 'SPA Sports Profile',
+    source: 'Sports Infrastructure Profile',
     date: '2024',
     link: '#'
   }

@@ -52,7 +52,9 @@ const Hero: React.FC = () => {
               transition={{ duration: 1.5, delay: 0.8 }}
               className="text-lg md:text-2xl text-white/70 font-light leading-relaxed max-w-xl border-l border-gold/40 pl-6 lg:pl-10 py-2"
             >
-              For five decades, Al Faren has been architecting the skyline with institutional landmarks and defining the pinnacle of international luxury.
+              For fifty years and counting, the story has never been just about buildings. <br className="hidden sm:block" />
+              It has been about shaping environments where life unfolds — where families grow, communities gather, and institutions endure. <br className="hidden sm:block" />
+              And the next chapter is already taking shape.
             </motion.p>
             
             <motion.div

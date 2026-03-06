@@ -106,7 +106,7 @@ const DubaiStudioPage: React.FC<{ setView: (v: any) => void }> = ({ setView }) =
                 variant="outline" 
                 className="px-12 py-6"
                 onClick={() => {
-                  window.location.search = '?category=villas';
+                  window.history.pushState({}, '', '?category=villas#portfolio');
                   setView('portfolio');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
@@ -182,6 +182,7 @@ const DubaiStudioPage: React.FC<{ setView: (v: any) => void }> = ({ setView }) =
                    <div>
                       <h4 className="text-white font-bold tracking-widest text-xs uppercase mb-2">Connect</h4>
                       <p className="text-white/60 text-lg font-light">studio@alfaren.com</p>
+                      <p className="text-white/60 text-lg font-light">T: +971 4 396 7901</p>
                    </div>
                 </div>
              </div>

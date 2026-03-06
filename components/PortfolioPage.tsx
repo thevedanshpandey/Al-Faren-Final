@@ -7,12 +7,12 @@ import { Project } from '../types';
 
 const CATEGORIES = [
   'All Projects',
-  'Institutional',
-  'Infrastructure',
-  'Healthcare',
-  'Residential',
   'Sports',
-  'Villa'
+  'Healthcare',
+  'Education',
+  'High-rise Residential',
+  'Villa',
+  'Leisure & Residential'
 ];
 
 const PortfolioPage: React.FC = () => {
@@ -37,6 +37,16 @@ const PortfolioPage: React.FC = () => {
     return PROJECTS.filter(p => p.category === selectedCategory);
   }, [selectedCategory]);
 
+  const handleCategoryChange = (cat: string) => {
+    setSelectedCategory(cat);
+    // Clear query param when manually changing category
+    if (window.location.search.includes('category=')) {
+      const url = new URL(window.location.href);
+      url.searchParams.delete('category');
+      window.history.replaceState({}, '', url.toString());
+    }
+  };
+
   return (
     <div className="bg-matte-black min-h-screen pt-32 pb-24">
       {/* Page Header */}
@@ -57,7 +67,7 @@ const PortfolioPage: React.FC = () => {
           {CATEGORIES.map((cat) => (
             <button
               key={cat}
-              onClick={() => setSelectedCategory(cat)}
+              onClick={() => handleCategoryChange(cat)}
               className={`text-[10px] lg:text-[11px] uppercase tracking-[0.4em] font-bold transition-all duration-300 relative pb-2 ${
                 selectedCategory === cat ? 'text-gold' : 'text-white/30 hover:text-white/60'
               }`}
